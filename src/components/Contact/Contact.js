@@ -8,16 +8,27 @@ function Contact() {
     message: ""
   });
 
+  const [status, setStatus] = useState("");
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you! Your message has been submitted.");
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
+
+    const response = await fetch("https://formspree.io/f/xovpaovd", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setStatus("Thanks! Your message has been sent.");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      setStatus("Oops! Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -50,6 +61,7 @@ function Contact() {
         />
         <button type="submit">Send Message</button>
       </form>
+      {status && <p className="form-status">{status}</p>}
     </section>
   );
 }

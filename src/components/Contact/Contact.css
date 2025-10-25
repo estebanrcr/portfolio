@@ -115,3 +115,9 @@
     padding: 0.7rem;
   }
 }
+.form-status {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #12b207; /* green for success */
+  text-align: center;
+}

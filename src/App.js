@@ -12,7 +12,7 @@ import Labs from './components/Labs/Labs'; // import your Labs page
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <Navbar />
       <Routes>
         <Route path="/" element={

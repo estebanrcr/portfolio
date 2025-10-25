@@ -45,7 +45,12 @@ export default function Services() {
         >
           {images.map((src, index) => (
             <SwiperSlide key={index}>
-              <img src={src} alt={`Service ${index + 1}`} />
+              <img
+                src={process.env.PUBLIC_URL + src}
+                alt={`Service ${index + 1}`}
+                 loading="lazy"
+                />
+
             </SwiperSlide>
           ))}
         </Swiper>

@@ -1,12 +1,23 @@
+// src/components/Work/ProjectPage.js
 import React from "react";
-import { useParams, Link } from "react-router-dom";
-import projects from "./data/projects"; // adjust path if needed
+import { useParams, useNavigate } from "react-router-dom";
+import projects from "./data/projects"; 
+
 
 export default function ProjectPage() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const project = projects.find(p => p.id === id);
 
   if (!project) return <p>Project not found</p>;
+
+  const goBackToWorks = () => {
+    navigate("/"); // go to home
+    setTimeout(() => {
+      const el = document.getElementById("work");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, 50); // slight delay to ensure element is in DOM
+  };
 
   return (
     <div style={{ textAlign: "center", padding: "2rem" }}>
@@ -25,9 +36,18 @@ export default function ProjectPage() {
       <p style={{ margin: "1rem 0" }}>{project.description}</p>
 
       <div style={{ marginTop: "2rem" }}>
-        <Link to="/#work" style={{ color: "#ff000d", textDecoration: "none" }}>
+        <button
+          onClick={goBackToWorks}
+          style={{
+            color: "#ff000d",
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+            fontSize: "1rem",
+          }}
+        >
           ← Back to Works
-        </Link>
+        </button>
       </div>
     </div>
   );

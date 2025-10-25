@@ -3,15 +3,17 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 28vh; /* adjust this value to move it higher/lower */
+  padding-top: 28vh;
   padding-bottom: 5vh;
   align-items: center;
-  height: 100vh; /* full screen */
+  height: 86vh;
   color: white;
   text-align: center;
- /* padding: 10vh 2rem; /* reduced horizontal padding for smaller screens */
   position: relative;
   overflow: hidden;
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
 }
 
 /* === Text === */
@@ -19,7 +21,7 @@
   font-size: 4rem;
   font-weight: 100;
   margin-bottom: 0.5rem;
-  margin-top: 0rem;;
+  margin-top: 0rem;
 }
 
 .hero h2 {
@@ -59,35 +61,41 @@
   z-index: 0;
 }
 
-
-
-/* Button play showreel */
-
-
-.cta-button {
-  color: white;
+/* === CTA Button === */
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:hover,
+.cta-button:active,
+.cta-button:focus {
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  filter: none !important;
+  text-decoration: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-text-stroke: 0px transparent !important;
+  mix-blend-mode: normal !important;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 5;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   margin-top: 8rem;
   padding: .8rem 2rem;
-  text-decoration: none;
   font-size: 1.2rem;
   border-radius: 5px;
-  border: 2px solid white;
-  
-  
-  transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-  background-color: #12b207;
+  background-color: #12b207 !important;
+  border-color: #12b207 !important;
 }
-
 
 /* =====================
    📱 RESPONSIVE STYLES
    ===================== */
-
-
-/* Tablets (≤ 1024px) */
 
 @media (max-width: 1024px) {
   .hero h1 {
@@ -103,17 +111,13 @@
   }
 
   .cta-button {
-  margin-top: 8rem;
-  padding: .8rem 2rem;
-  font-size: 1.2rem; 
-}
-}
-
-/* Mobile (≤ 768px) */
-@media (max-width: 768px) {
-  .hero {
+    margin-top: 8rem;
+    padding: .8rem 2rem;
+    font-size: 1.2rem;
   }
+}
 
+@media (max-width: 768px) {
   .hero h1 {
     font-size: 3.3rem;
     line-height: 1.2;
@@ -126,17 +130,18 @@
   .hero p {
     font-size: 1.0rem;
   }
+
   .cta-button {
-  margin-top: 10rem;
-  padding: .8rem 2rem;
-  font-size: 1.2rem; 
-}
+    margin-top: 10rem;
+    padding: .8rem 2rem;
+    font-size: 1.2rem;
+  }
 }
 
-/* Small mobile (≤ 480px) */
 @media (max-width: 480px) {
   .hero {
     padding: 16vh 1rem;
+    height: 50vh;
   }
 
   .hero h1 {
@@ -153,21 +158,39 @@
   }
 
   .cta-button {
-  margin-top: 6rem;
-  padding: .8rem 2rem;
-  font-size: 1.2rem; 
-}
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit:cover;
-  z-index: -1;
-  opacity: 0.8;
+    margin-top: 6rem;
+    padding: .8rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8;
+  }
 }
 
-
-
+/* Force white for the Play Showreel button across all browsers */
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:hover,
+.cta-button:active,
+.cta-button:focus {
+  color: #ffffff !important;               /* text colour */
+  border-color: #ffffff !important;        /* border colour */
+  background-color: transparent !important; /* keep background transparent */
+  opacity: 1 !important;                   /* prevent inherited dimming */
+  filter: none !important;                 /* remove filters from parent */
+  text-decoration: none !important;
+  -webkit-text-fill-color: #ffffff !important; /* Chrome, Safari, mobile WebKit */
+  -moz-text-fill-color: #ffffff !important;    /* Firefox (if supported) */
+  -webkit-font-smoothing: antialiased;          /* smooth text rendering */
+  -moz-osx-font-smoothing: grayscale;          /* smooth on Mac/Firefox */
 }
+

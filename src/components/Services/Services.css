@@ -102,6 +102,8 @@
 }
 
 /* --- responsive layout --- */
+
+
 @media (max-width: 768px) {
   .services-layout {
     grid-template-columns: 1fr;
@@ -141,9 +143,12 @@
 
 .collaborators p {
   font-size: 1rem;
-  text-align: center;
-  line-height: 1.7;
-  opacity: 0.85;
+   text-align: left;       /* avoid large gaps on mobile */
+    line-height: 1.7;
+    opacity: 0.85;
+    text-align-last: left;  /* keep last line aligned left */
+    margin: 0 auto;         /* keep some spacing from edges */
+    max-width: 90%;
 
 }
 }
