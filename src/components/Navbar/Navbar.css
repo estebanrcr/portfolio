@@ -1,0 +1,112 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.68);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center; /* desktop: links centered */
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  font-family: "Fira Code", monospace;
+}
+
+/* Desktop links */
+.navbar-links {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  cursor: pointer;
+}
+
+.navbar-links li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: white;
+}
+
+/* Hamburger toggle (hidden by default) */
+.navbar-toggle {
+  display: none; /* ✅ hidden on desktop */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* ================= Mobile ================= */
+@media (max-width: 900px) {
+  .navbar {
+    justify-content: flex-end; /* hamburger on right */
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(38, 35, 35, 0.95);
+    flex-direction: column;
+    padding-top: 6rem;
+    gap: 2.5rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .navbar-links.active {
+    transform: translateX(0);
+  }
+
+  /* ✅ only show hamburger on mobile */
+  .navbar-toggle {
+    display: flex;
+    position: fixed;
+    top: 2.2rem;
+    right: 4.5rem;
+    z-index: 1100;
+  }
+
+  .navbar-links li {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    font-size: 1.2rem;
+    margin-right: 5rem;
+    color: #d82400;
+  }
+
+  .navbar-links li a {
+    font-size: 1.2rem;
+    color: #2f7540;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-links li a:hover {
+    color: white;
+  }
+}

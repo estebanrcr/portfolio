@@ -1,0 +1,99 @@
+/* About Section */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh; /* ensures section has height */
+  color: #fff;
+  font-family: "Jet Brains Mono NL ExtraLight", monospace;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 0rem; /* keep your padding */
+}
+
+/* About Photo */
+.about-photo {
+  flex: 1 1 50%;                /* half width on desktop */
+  background-image: url("/public/images/bio_pic_2.jpg");
+  background-attachment: fixed;  /* parallax effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;                  /* fills container height */
+  min-height: 300px;             /* prevents collapsing on small screens */
+}
+
+/* About Text */
+.about-text {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 3rem;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.about-text strong {
+  color: #fff;
+}
+
+.about-text .quote {
+  margin-top: 2rem;
+  font-style: italic;
+  font-weight: 300;
+  color: #999;
+  border-left: 2px solid #555;
+  padding-left: 1rem;
+}
+
+/* Responsive: stack photo above text */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    align-items: center; /* ensures content stays centred */
+    padding: 0; /* remove side padding to give more room */
+  }
+
+  .about-photo {
+    flex: 1 1 100%;
+    min-height: 250px; /* keeps it visible */
+    background-attachment: scroll;
+  }
+
+   .about-text {
+    flex: 1 1 100%;
+    padding: 2rem 1.2rem; /* smaller padding for wider text area */
+    text-align: left;
+    width: 90%; /* use almost full width */
+    margin: 0 auto;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    color: #ccc;
+  }
+  .about-text h2 {
+  font-size: 2 rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+
+ 
+}
