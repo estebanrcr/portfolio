@@ -22,20 +22,27 @@
   padding: 0;
 }
 
+.navbar-links li:hover {
+  color: rgba(255, 255, 255, 0.558);
+  
+}
+
 .navbar-links li {
   cursor: pointer;
 }
 
 .navbar-links li a {
-  color: #ccc;
+  color: #17fd36;
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
 .navbar-links li a:hover {
-  color: white;
+  color: rgba(255, 255, 255, 0.487);
 }
+
+
 
 /* Hamburger toggle (hidden by default) */
 .navbar-toggle {
@@ -96,17 +103,17 @@
     list-style: none;
     font-size: 1.2rem;
     margin-right: 5rem;
-    color: #d82400;
+    color: #ffffff;
   }
 
   .navbar-links li a {
     font-size: 1.2rem;
-    color: #2f7540;
+    color: #18e64b;
     margin: 0;
     padding: 0;
   }
 
   .navbar-links li a:hover {
-    color: white;
+    color: rgb(255, 255, 255);
   }
 }

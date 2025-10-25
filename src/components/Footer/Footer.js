@@ -3,6 +3,7 @@ import React from "react";
 import { FaInstagram, FaLinkedin, FaBriefcase, FaSpotify } from "react-icons/fa";
 import './Footer.css';
 
+
 function Footer() {
   return (
     <footer className="footer">
@@ -14,8 +15,10 @@ function Footer() {
           <FaLinkedin />
         </a>
         <a href="https://www.upwork.com/freelancers/~0183a1eb42f1bddc08" target="_blank" rel="noopener noreferrer">
-          <FaBriefcase />
-        </a>
+  <img src={`${process.env.PUBLIC_URL}/images/upwork.png`} alt="Upwork" className="upwork-logo" />
+
+</a>
+
                <a href="https://www.spotify.com" target="_blank" rel="noopener noreferrer">
           <FaSpotify/>
         </a>

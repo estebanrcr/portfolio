@@ -62,11 +62,30 @@
 /* PROJECT TITLE */
 .project-item h3 {
   margin-top: .3rem;
-  margin-bottom: 0;
-  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
   font-weight: 400;
   color: #ccc;
 }
+
+/* HIGHLIGHT PROJECT CATEGORY */
+.project-category {
+  color: #ffffff;   /* choose a bright colour */
+  font-weight: 600;
+  font-size: 0.85em;  /* slightly smaller than title */
+  margin-left: 0.4rem;
+}
+.project-category.commercial { font-weight: bold; }        /* bold */
+.project-category.short { font-style: italic; }           /* italic */
+.project-category.psa { text-transform: uppercase; }      /* uppercase */
+.project-category.ad { letter-spacing: 2px; font-weight: 500; } /* spaced letters, medium weight */
+.project-category.campaign { font-style: italic; font-weight: 300; } /* light italic */
+.project-category.documentary { text-decoration: underline; } /* optional extra */
+.project-category.animation { letter-spacing: 1.5px; font-style: italic; }
+
+✅ This way each category word can have its own colour instead of all being green.
+
+
 
 /* RESPONSIVE STYLES */
 

@@ -1,7 +1,8 @@
 // src/components/Work/ProjectPage.js
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import projects from "./data/projects"; 
+import "./ProjectPage.css";
 
 
 export default function ProjectPage() {
@@ -9,23 +10,26 @@ export default function ProjectPage() {
   const navigate = useNavigate();
   const project = projects.find(p => p.id === id);
 
-  if (!project) return <p>Project not found</p>;
+    // Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  if (!project) return <p className="project-page-notfound">Project not found</p>;
 
   const goBackToWorks = () => {
     navigate("/"); // go to home
     setTimeout(() => {
       const el = document.getElementById("work");
       if (el) el.scrollIntoView({ behavior: "smooth" });
-    }, 50); // slight delay to ensure element is in DOM
+    }, 50);
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "2rem" }}>
-      <h1>{project.title}</h1>
-      <div style={{ maxWidth: "800px", margin: "2rem auto" }}>
+    <div className="project-page">
+      <h1 className="project-title">{project.title}</h1>
+      <div className="project-video">
         <iframe
-          width="100%"
-          height="450"
           src={`https://www.youtube.com/embed/${project.youtubeId}`}
           title={project.title}
           frameBorder="0"
@@ -33,22 +37,11 @@ export default function ProjectPage() {
           allowFullScreen
         ></iframe>
       </div>
-      <p style={{ margin: "1rem 0" }}>{project.description}</p>
+      <p className="project-description">{project.description}</p>
 
-      <div style={{ marginTop: "2rem" }}>
-        <button
-          onClick={goBackToWorks}
-          style={{
-            color: "#ff000d",
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-            fontSize: "1rem",
-          }}
-        >
-          ← Back to Works
-        </button>
-      </div>
+      <button onClick={goBackToWorks} className="back-button">
+        ← Back to Works
+      </button>
     </div>
   );
 }
