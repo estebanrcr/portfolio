@@ -133,7 +133,7 @@ const projects = [
     id: "project-Seventeenth",
     title: "F1 Carreras Informaticas",
     category:"TV",
-    youtubeId: "PosZwamEPCt-v_M_",
+    youtubeId: "BREln3ZwITM",
     description: "Original Music, Sound design and Sound mix for this TV show",
     thumbnail: "/images/Work_img/f1.png"
   },
