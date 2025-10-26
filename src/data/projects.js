@@ -5,7 +5,7 @@ const projects = [
     title: "IF Apply" ,
     category:"Commercial",
     youtubeId: "QoLOomL1sVs",
-    description: "This is a short description for Project One.",
+    description: "Sound design and mix for this commercial",
     thumbnail: "/images/Work_img/if_apply.png"
   },
   {
@@ -13,7 +13,7 @@ const projects = [
     title: "The Journey Within",
     category:"Short",
     youtubeId: "48mH4c4ia58",
-    description: "A sequence of memories in motion. An oneiric compilation of the act of observing.",
+    description: "A sequence of memories in motion. An oneiric compilation of the act of observing. Original Music, Sound design",
     thumbnail: "/images/Work_img/thejourneywithin.jpg"
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     title: "GSMA",
     category:"Campaign",
     youtubeId: "48mH4c4ia58",
-    description: "Project Three is focused on …",
+    description: "Sound design for this GSMA Campaign",
     thumbnail: "/images/Work_img/gsmaimg.png"
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     title: "NZTA",
     category:"PSA",
     youtubeId: "V6QnjLIG0VA",
-    description: "This project explores …",
+    description: "Sound design and post-production for the New Zealand Transpotation Agency Public Service Announcement",
     thumbnail: "/images/Work_img/nzta.png"
   },
   {
@@ -62,7 +62,7 @@ const projects = [
     title: "Cafe Wow Dole",
     category:"Ad",
     youtubeId: "TUysaC4_PZQ",
-    description: "Sound mix and post-production for this short film",
+    description: "Sound design and mix for Ad",
     thumbnail: "/images/Work_img/dole.png"
   },
    {
@@ -70,7 +70,7 @@ const projects = [
     title: "Bodega del Gredal",
     category:"Campaign",
     youtubeId: "GoUBFQdEUaI",
-    description: "Sound mix and post-production for this short documentary, showcasing the process of creating a wine in Bodega del Gredal",
+    description: "Sound mix and post-production for this Campaign video, showcasing the process of creating a wine in Bodega del Gredal",
     thumbnail: "/images/Work_img/vendimiaimg.jpg"
   },
    {
@@ -102,7 +102,7 @@ const projects = [
     title: "Sayri",
     category:"Ad",
     youtubeId: "_MoOhjGZLf4",
-    description: "Original Music and Sound design for this short film",
+    description: "Original Music and Sound design for this Ad",
     thumbnail: "/images/Work_img/sayri.png"
   },
    {
@@ -110,7 +110,7 @@ const projects = [
     title: "Mindset",
     category:"Documentary",
     youtubeId: "cbR-fuWs-2g",
-    description: "Original Music and Sound design for this short film",
+    description: "Sound design, sound post-production for this feature documentary",
     thumbnail: "/images/Work_img/mindset.png"
   },
    {
@@ -118,7 +118,7 @@ const projects = [
     title: "Talleres La nueva Camiseta",
     category:"Ad",
     youtubeId: "W-mdfL536v8",
-    description: "Original Music and Sound design for this short film",
+    description: "Original Music and Sound design for this ad",
     thumbnail: "/images/Work_img/talleres.png"
   },
    {
@@ -128,6 +128,14 @@ const projects = [
     youtubeId: "NTfFOHAaIgc",
     description: "Sound design for this animation",
     thumbnail: "/images/Work_img/memoria.png"
+  },
+    {
+    id: "project-Seventeenth",
+    title: "F1 Carreras Informaticas",
+    category:"TV",
+    youtubeId: "PosZwamEPCt-v_M_",
+    description: "Original Music, Sound design and Sound mix for this TV show",
+    thumbnail: "/images/Work_img/f1.png"
   },
 ];
 

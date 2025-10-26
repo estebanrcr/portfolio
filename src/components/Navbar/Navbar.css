@@ -24,7 +24,6 @@
 
 .navbar-links li:hover {
   color: rgba(255, 255, 255, 0.558);
-  
 }
 
 .navbar-links li {
@@ -42,11 +41,9 @@
   color: rgba(255, 255, 255, 0.487);
 }
 
-
-
 /* Hamburger toggle (hidden by default) */
 .navbar-toggle {
-  display: none; /* ✅ hidden on desktop */
+  display: none;
   flex-direction: column;
   cursor: pointer;
 }
@@ -62,7 +59,10 @@
 /* ================= Mobile ================= */
 @media (max-width: 900px) {
   .navbar {
-    justify-content: flex-end; /* hamburger on right */
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    backdrop-filter: none;
   }
 
   .navbar-links {
@@ -72,48 +72,55 @@
     height: 100vh;
     width: 100%;
     background-color: rgba(38, 35, 35, 0.95);
+    display: flex;
     flex-direction: column;
-    padding-top: 6rem;
+    justify-content: flex-start;
+  padding-top: 10rem; /* adjust this value until it feels right */      /* ✅ perfectly vertical centre */
+    align-items: center;            /* ✅ perfectly horizontal centre */
     gap: 2.5rem;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .navbar-links.active {
     transform: translateX(0);
   }
 
-  /* ✅ only show hamburger on mobile */
   .navbar-toggle {
     display: flex;
     position: fixed;
-    top: 2.2rem;
-    right: 4.5rem;
+    top: 1.2rem;
+    right: 1.5rem;
+    flex-direction: column;
+    cursor: pointer;
     z-index: 1100;
   }
 
+  .navbar-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    border-radius: 2px;
+  }
+
   .navbar-links li {
-    width: 100%;
-    text-align: center;
     list-style: none;
+    margin: 0;                     /* ✅ removes unwanted offset */
+    text-align: center;
+    width: 100%;
     font-size: 1.2rem;
-    margin-right: 5rem;
-    color: #ffffff;
   }
 
   .navbar-links li a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #18e64b;
-    margin: 0;
-    padding: 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
 
   .navbar-links li a:hover {
-    color: rgb(255, 255, 255);
+    color: #ffffff;
   }
 }

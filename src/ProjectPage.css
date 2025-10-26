@@ -30,4 +30,57 @@
   border: none;
   cursor: pointer;
   font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.project-page .back-button:hover {
+  color: #ff4d4d;
+  transform: scale(1.05);
+}
+
+/* ================= Responsive ================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .project-page h1 {
+    font-size: 1.7rem;
+  }
+
+  .project-page iframe {
+    height: 400px;
+  }
+
+  .project-page p {
+    font-size: 1rem;
+  }
+
+  .project-page .back-button {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .project-page {
+    padding: 2rem 1rem;
+  }
+
+  .project-page h1 {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
+
+  .project-page iframe {
+    height: 250px;
+    margin-top: 3rem;
+  }
+
+  .project-page p {
+    font-size: 0.95rem;
+  }
+
+  .project-page .back-button {
+    font-size: 1rem;
+    padding-top: 3rem;
+  }
 }

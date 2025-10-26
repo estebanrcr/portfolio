@@ -82,6 +82,13 @@
 .project-category.campaign { font-style: italic; font-weight: 300; } /* light italic */
 .project-category.documentary { text-decoration: underline; } /* optional extra */
 .project-category.animation { letter-spacing: 1.5px; font-style: italic; }
+.project-category.tv {
+  color: #00ffea;
+  text-shadow: 1px 0 red, -1px 0 blue;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 
 ✅ This way each category word can have its own colour instead of all being green.
 
@@ -116,7 +123,7 @@
   }
 
   .project-item {
-    flex: 0 0 85%; /* show one item mostly in view */
+    flex: 0 0 95%; /* show one item mostly in view */
     scroll-snap-align: center;
     text-align: center;
   }
@@ -141,10 +148,11 @@
 
   .work h2 {
     font-size: 1.6rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .project-item h3 {
+    margin-top: 3rem;
     font-size: 1.1rem;
     padding-bottom: 0;
   }
