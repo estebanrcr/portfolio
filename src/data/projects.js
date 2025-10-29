@@ -142,7 +142,7 @@ const projects = [
     title: "LEXperts  Podcast",
     category:"podcast",
     youtubeId: "CHNf0iBKymI",
-    description: "Original Music, Sound design and Sound mix for this TV show",
+    description: "Sound Post-production for this podcast",
     thumbnail: "/images/Work_img/lex.webp"
   },
     {
@@ -174,7 +174,7 @@ const projects = [
     title: "Capucha",
     category:"AudioBook",
     youtubeId: "tn0G3xphn4k",
-    description: "Sound design and post-production for this documentary",
+    description: "Sound design and Sound Mix for this short audio book",
     thumbnail: "/images/Work_img/capucha.webp"
   },
     {
