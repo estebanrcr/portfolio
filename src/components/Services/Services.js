@@ -7,17 +7,17 @@ import "swiper/css/autoplay";
 
 export default function Services() {
   const images = [
-    "/images/Things/all.jpg",
-    "/images/Things/apollo1.jpg",
-    "/images/Things/flute.jpg",
-    "/images/Things/head.jpg",
-    "/images/Things/macbook.jpg",
-    "/images/Things/piano.jpg",
-    "/images/Things/reflection.jpg",
-    "/images/Things/up.jpg",
-    "/images/Things/cello.jpg",
-    "/images/Things/sanpedro.jpg",
-    "/images/Things/piano2.jpg",
+    "/images/Things/all.webp",
+    "/images/Things/apollo1.webp",
+    "/images/Things/flute.webp",
+    "/images/Things/head.webp",
+    "/images/Things/macbook.webp",
+    "/images/Things/piano.webp",
+    "/images/Things/reflection.webp",
+    "/images/Things/up.webp",
+    "/images/Things/cello.webp",
+    "/images/Things/sanpedro.webp",
+    "/images/Things/piano2.webp",
   ];
 
 

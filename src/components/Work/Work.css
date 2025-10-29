@@ -28,12 +28,18 @@
 .project-item {
   text-decoration: none;
   color: inherit;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.3s ease;
+  will-change: transform, opacity;
+
 }
 
-.projects-grid:hover .project-item {
-  opacity: 0.2;           /* all items dim slightly */
-  transition: opacity 0.6s ease;
+.projects-item:hover {
+    opacity: 1;
+  transform: translateY(-5px);
+  box-shadow: 2px 6px 20px rgba(255, 255, 255, 0.3);
+  filter: brightness(1.1);
+  /*opacity: 0.2;           /* all items dim slightly */
+  /*transition: opacity 0.4s ease;*/
 }
 
 .projects-grid .project-item:hover {
@@ -88,6 +94,13 @@
   letter-spacing: 1px;
   font-weight: 600;
   text-transform: uppercase;
+}
+.project-category.podcast {
+  font-family: "Courier New", monospace; /* retro, audio-console vibe */
+  font-variant: small-caps;               /* makes it look broadcast-like */
+  letter-spacing: 1px;
+  color: #f5a623;                         /* warm tone, like audio waves */
+  text-shadow: 0 0 6px rgba(245, 166, 35, 0.4); /* subtle glow */
 }
 
 ✅ This way each category word can have its own colour instead of all being green.

@@ -13,7 +13,7 @@
 /* About Photo */
 .about-photo {
   flex: 1 1 50%;                /* half width on desktop */
-  background-image: url("/public/images/trompeta.jpg");
+  background-image: url("/public/images/trompeta.webp");
   background-attachment: fixed;  /* parallax effect */
   background-position: center;
   background-repeat: no-repeat;

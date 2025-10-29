@@ -59,7 +59,7 @@ function Contact() {
           onChange={handleChange}
           required
         />
-        <button type="submit">Send Message</button>
+        <button type="submit">Send </button>
       </form>
       {status && <p className="form-status">{status}</p>}
     </section>

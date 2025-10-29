@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Hero from './components/Hero/Hero';
 import Contact from './components/Contact/Contact';
@@ -12,7 +12,7 @@ import Labs from './components/Labs/Labs'; // import your Labs page
 
 function App() {
   return (
-    <Router basename="/portfolio">
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={
@@ -23,7 +23,6 @@ function App() {
             <hr className="section-separator" />
             <Services />
             <hr className="section-separator" />
-
             <Contact />
             <Footer />
           </>

@@ -4,19 +4,25 @@
   background-color: #1a1a1a;
   color: #ccc;
   text-align: center;
-  padding: 1.5rem 1rem;
+  padding: .5rem 1rem;
   font-family: "Fira Code", monospace;
+   height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer .social-links {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5 rem;
+  margin-top: 1rem;
 }
 
 .footer .social-links a {
   color: #ccc;
   margin: 0 1rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   transition: color 0.3s;
+  padding-bottom: 0;
 }
 
 .footer .social-links a:hover {
@@ -24,13 +30,14 @@
 }
 
 .footer p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 0;
+  
 }
 
 .upwork-logo {
-  width: 23px;
-  height: 23px;
+  width: 21px;
+  height: 21px;
   vertical-align: middle; /* baseline alignment */
   position: relative;
   top: -6px; /* move it up by 3px */
